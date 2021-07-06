@@ -8,12 +8,15 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 
+import { AuthenticationModule } from './authentication/authentication.module';
+import { PagesModule } from '../app/pages/pages.module'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,6 +24,8 @@ import { AppComponent } from './app.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AuthenticationModule,
+    PagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
