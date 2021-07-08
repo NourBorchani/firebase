@@ -5,7 +5,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 import { AngularFireAuth } from "@angular/fire/auth";
 import { auth } from 'firebase/app';
 
-import { User } from "../services/user";
+import { User } from "src/app/shared/models/user.model";
 
 @Injectable({
   providedIn: 'root',
@@ -39,7 +39,7 @@ export class AuthService {
       .signInWithEmailAndPassword(email, password)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/']);
         });
         this.SetUserData(result.user);
       })
@@ -66,7 +66,7 @@ export class AuthService {
   // Send email verfificaiton when new user sign up
   SendVerificationMail() {
     return this.afAuth.auth.currentUser.sendEmailVerification().then(() => {
-      this.router.navigate(['verify-email-address']);
+      this.router.navigate(['/authentication/verify-email-address']);
     });
   }
 
@@ -99,7 +99,7 @@ export class AuthService {
       .signInWithPopup(provider)
       .then((result) => {
         this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
+          this.router.navigate(['/']);
         });
         this.SetUserData(result.user);
       })
@@ -131,7 +131,7 @@ export class AuthService {
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['authentication/login']);
     });
   }
 }
