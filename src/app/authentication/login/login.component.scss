@@ -1,0 +1,62 @@
+h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+    line-height: 0.1em;
+    margin: 20px 0 20px;
+  }
+  
+  h6 span {
+    background: #F9FAFC;
+    padding: 0 20px;
+  }
+label{
+    padding-bottom: 2px;
+}
+a{
+    text-decoration: none;
+}
+  .formGroup{
+   display:flex;
+   flex-direction: column;
+  }
+  .formControl{
+    width: 230px;
+  }
+
+  label{
+      text-align:left;
+  }
+
+  .login-btn{
+   background-color: #17AEBE;
+   width: 85%;
+   margin: auto;
+   padding: 10px;
+    border-radius: 5px;
+    border-color: gainsboro;
+  }
+
+  .google-btn{
+   background-color: #FC3850;
+   width: 85%;
+   margin: auto;
+   padding: 10px;
+    border-radius: 5px;
+    border-color: gainsboro;
+  }
+
+  #userPassword{
+    margin-bottom: 50px;
+    padding: 7px;
+    border-color: gray;
+    border-radius: 5px;
+  }
+
+  .white{
+      color: white;
+  }
+  .redirect{
+    font-size: 10px;
+  }
+  
