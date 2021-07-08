@@ -10,8 +10,8 @@ import { AuthService } from 'src/app/authentication/services/auth.service';
 export class VideoLibraryComponent implements OnInit {
 
   constructor( public authService: AuthService,
-    public router: Router,
-    public ngZone: NgZone) { }
+               public router: Router,
+               public ngZone: NgZone) { }
 
   ngOnInit(): void {
   }
