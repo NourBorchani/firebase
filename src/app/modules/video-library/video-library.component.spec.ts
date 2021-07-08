@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LandingComponent } from './landing.component';
+import { VideoLibraryComponent } from './video-library.component';
 
-describe('LandingComponent', () => {
-  let component: LandingComponent;
-  let fixture: ComponentFixture<LandingComponent>;
+describe('VideoLibraryComponent', () => {
+  let component: VideoLibraryComponent;
+  let fixture: ComponentFixture<VideoLibraryComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LandingComponent ]
+      declarations: [ VideoLibraryComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LandingComponent);
+    fixture = TestBed.createComponent(VideoLibraryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
