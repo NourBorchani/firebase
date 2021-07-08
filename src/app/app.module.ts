@@ -12,11 +12,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AuthenticationModule } from './authentication/authentication.module';
-import { PagesModule } from '../app/pages/pages.module'
+import { ModulesModule } from './modules/modules.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MaterialModule } from 'src/app/shared/material.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,9 @@ import { PagesModule } from '../app/pages/pages.module'
     AngularFireAuthModule,
     AngularFirestoreModule,
     AuthenticationModule,
-    PagesModule,
+    ModulesModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
